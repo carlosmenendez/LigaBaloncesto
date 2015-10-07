@@ -20,8 +20,6 @@ public class JugadorService {
 
         Calendar cal = Calendar.getInstance();
 
-
-
         Jugador jugador1 = new Jugador();
         jugador1.setNombre("Xavi Pandis");
         cal.set(1994, Calendar.NOVEMBER, 24);
