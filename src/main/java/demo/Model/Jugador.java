@@ -1,14 +1,8 @@
 package demo.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
-/**
- * Created by Carlos on 05/10/2015.
- */
 @Entity
 public class Jugador {
     @Id
@@ -27,6 +21,9 @@ public class Jugador {
     private int rebotesTotales;
 
     private String posicion;
+
+    @ManyToOne
+    private Equipo equipo;
 
     public Long getId() {
         return id;
@@ -55,6 +52,11 @@ public class Jugador {
     public String getPosicion() {
         return posicion;
     }
+
+    public Equipo getEquipo() { return equipo;}
+
+
+    public void setEquipo(Equipo equipo) {this.equipo = equipo; }
 
     public void setId(Long id) {
         this.id = id;
